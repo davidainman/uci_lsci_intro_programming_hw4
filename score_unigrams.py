@@ -7,7 +7,7 @@
 #   - train a single unigram model on the combined contents of every .txt file
 #     in the training folder
 #   - for each sentence (line) in the test file, calculate the log unigram 
-#     probability ysing the trained model (see the lab handout for details on log 
+#     probability using the trained model (see the lab handout for details on log 
 #     probabilities)
 #   - write a single CSV file to the output path. The CSV file should have two
 #     columns with headers, called "sentence" and "unigram_prob" respectively.
