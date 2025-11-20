@@ -29,7 +29,10 @@ def test_score_unigrams(monkeypatch, capsys):
         rows = [x for x in reader]
         for i, row in enumerate(rows):
             assert row['sentence'].strip() == expected_probs[i]['sentence']
-            assert row['unigram_prob'] == pytest.approx(expected_probs[i]['unigram_prob'])
+            if expected_probs[i] == '-inf':
+                assert row['unigram_prob'] == pytest.approx(expected_probs[i]['unigram_prob'])
+            else:
+                assert float(row['unigram_prob']) == pytest.approx(float(expected_probs[i]['unigram_prob']))
 
 def test_get_mean_valence():
     from get_mean_valence import get_mean_valence
