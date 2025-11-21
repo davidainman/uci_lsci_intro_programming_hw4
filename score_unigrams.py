@@ -1,13 +1,15 @@
 # Write a function called score_unigrams that takes three arguments:
-#   - a path to a folder of training data 
-#   - a path to a test file that has a sentence on each line
-#   - a path to an output CSV file
+#   - a list of strings that are paths to files containing training data
+#     e.g. ["folder/file1.txt", "folder/file2.txt", "folder/file3.txt"]
+#   - a string that is a path to a test file that has a sentence on each line
+#     e.g. "folder/test.txt"
+#   - a string that is a path to an output CSV file
 #
 # Your function should do the following:
 #   - train a single unigram model on the combined contents of every .txt file
 #     in the training folder
 #   - for each sentence (line) in the test file, calculate the log unigram 
-#     probability using the trained model (see the lab handout for details on log 
+#     probability ysing the trained model (see the lab handout for details on log 
 #     probabilities)
 #   - write a single CSV file to the output path. The CSV file should have two
 #     columns with headers, called "sentence" and "unigram_prob" respectively.
