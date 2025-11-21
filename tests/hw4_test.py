@@ -18,9 +18,11 @@ def test_score_unigrams(monkeypatch, capsys):
         'unigram_prob': '-inf'}
     ]
     result = score_unigrams(
-        Path('training_data'), 
-        Path('test_data/test_sentences.txt'), 
-        Path('output.csv'))
+        ['training_data/austen-emma.txt',
+         'training_data/austen-persuasion.txt',
+         'training_data/austen-sense.txt'], 
+        'test_data/test_sentences.txt', 
+        'output.csv')
     
     assert result == None
 
